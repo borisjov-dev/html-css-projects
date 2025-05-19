@@ -20,4 +20,4 @@ A responsive portfolio  built with HTML5 & CSS3.
 - borisjov-dev
 
 ## Preview
-[Live Demo](https://borisjov-dev.github.io/html-css-portfolio/)
+[Live Demo](https://borisjov-dev.github.io/html-css-projects/)
