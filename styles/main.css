@@ -236,7 +236,6 @@ body {
   
 }
 
-
    .redirect-btn {
       padding: 12px 24px;
       margin: 25px;
@@ -257,53 +256,18 @@ body {
   -webkit-backdrop-filter: blur(20px);
 }
 
-/* 
-.services-container {
-  display: flex;
-  width: 100%;
-  justify-content: center;
-  margin: auto;
-  text-align: center;
- 
-}
-
-.section-services {
-  padding: 30px;
-  text-align: center;
-}
-
-.services-card {
- 
-  border: 2px solid  rgba(165, 211, 27, 0.977);;
-}
-
-@media (max-width: 768px) {
-  .section-services {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    flex-wrap: wrap;
+.star-rating {
+    direction: rtl; /* Right to left for easier star hover effect */
+    font-size: 2rem;
+    unicode-bidi: bidi-override;
+    display: inline-flex;
   }
-
-} */
-
-/* .about-me-container {
-  width: 100%;
-  display: flex;
-}
-
-.img-div  {
-  width: 50%;
-  height: 100%;
-}
-
-
-.img-div img {
-  max-width: 100%;
-  max-height: 300px;
-  border-radius: 50%;
-}
-
-.text-div {
-  width: 50%;
-} */
+  .star {
+    cursor: pointer;
+    color: lightgray;
+    transition: color 0.2s;
+  }
+  .star.hover,
+  .star.selected {
+    color: gold;
+  }

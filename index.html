@@ -1,3 +1,9 @@
+
+<?php
+session_start();
+$isLoggedIn = isset($_SESSION['user_id']); // adjust this key to your login system
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -85,9 +91,18 @@
             I've been building clean, semantic layouts and continuously
             improving how content is presented on the web.
           </p>
-            <a href="./examples/html-ex/example-one.html" style="text-decoration: none;"> <button style="margin: 0;" class="redirect-btn">
+            <a href="./examples/html-ex/examples.html" style="text-decoration: none;"> <button style="margin: 0;" class="redirect-btn">
    Examples
   </button></a>
+  <p>Rate this project:</p>
+  <div class="star-rating" id="starRating">
+    <span class="star" data-value="5">&#9733;</span>
+    <span class="star" data-value="4">&#9733;</span>
+    <span class="star" data-value="3">&#9733;</span>
+    <span class="star" data-value="2">&#9733;</span>
+    <span class="star" data-value="1">&#9733;</span>
+  </div>
+  <p>Your rating: <span id="ratingValue">0</span></p>
         </div>
         <div class="css-div services-card">
           Css <br />
@@ -99,6 +114,17 @@
             modern websites. It's where creativity meets control, and I’ve been
             hooked ever since.
           </p>
+               <a href="./examples/css-ex/examplescss.html" style="text-decoration: none;"> <button style="margin: 0;" class="redirect-btn">
+   Examples
+  </button></a>
+  <p>Rate this project:</p>
+  <div class="star-rating" id="starRating">
+    <span class="star" data-value="5">&#9733;</span>
+    <span class="star" data-value="4">&#9733;</span>
+    <span class="star" data-value="3">&#9733;</span>
+    <span class="star" data-value="2">&#9733;</span>
+    <span class="star" data-value="1">&#9733;</span>
+  </div>
         </div>
 
         <div class="css-div services-card">
@@ -139,24 +165,9 @@
       </div>
     </section>
 
-    <script>
-      const aboutSection = document.querySelector(".section-about");
+    <script src="./js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
-      const observer = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              entry.target.classList.add("visible");
-              observer.unobserve(entry.target); // Only animate once
-            }
-          });
-        },
-        {
-          threshold: 0.1,
-        }
-      );
 
-      observer.observe(aboutSection);
-    </script>
   </body>
 </html>
