@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BorisJov</title>
+    <link rel="stylesheet" href="./styles/main.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="heading" id="home">
+      <div class="nav">
+        <div class="logo">
+          <img src="./images/logologologo.png" alt="" srcset="" />
+        </div>
+        <div class="nav-links">
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="hero">
+        <div class="hero-text">
+          <h1>
+            Road to Fullstak Web Developer <br />
+            HTML & CSS PROJECT
+          </h1>
+
+          <a href="#about" class="arrow-down-link">
+            <i class="fa-solid fa-chevron-down arrow-down"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <section class="section-about" id="about">
+      <div class="container">
+        <h2>About Me</h2>
+        <h3>
+          I am passionate about building modern fully resposive and clean
+          websites...
+        </h3>
+      </div>
+
+      <div class="about-me-container">
+        <div class="img-div">
+          <img src="./images/i.jfif" alt="" srcset="" />
+        </div>
+        <div class="text-div">
+          Hi, I’m <strong>Boris Jov</strong>, a passionate Full Stack Web
+          Developer with a strong eye for clean design and scalable code. I
+          specialize in building modern, responsive web applications from front
+          to back — turning ideas into fully functional digital experiences.
+          With experience in HTML, CSS, JavaScript, Bootstrap,Php, OOP ,Laravel,
+          MySQL, and Git, I love solving problems and continuously learning new
+          technologies. Whether it’s crafting intuitive user interfaces or
+          building powerful backend systems, I’m all about delivering
+          high-quality results that help people and businesses succeed.
+                <a href="./about-me/index.html" style="text-decoration: none;"> <button class="redirect-btn">
+
+   More About Me
+  </button></a>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="section-services" id="services">
+      <h2>Services</h2>
+      <div class="services-container">
+        <div class="html-div services-card">
+          <strong>HTML</strong> <br />
+
+          <p>
+            My journey into web development began with HTML — the foundation of
+            every website. I was amazed at how simple tags could bring structure
+            to a blank page. Creating my first “Hello World 😊” felt like
+            opening the door to a whole new world of possibilities. Since then,
+            I've been building clean, semantic layouts and continuously
+            improving how content is presented on the web.
+          </p>
+            <a href="./examples/html-ex/example-one.html" style="text-decoration: none;"> <button style="margin: 0;" class="redirect-btn">
+   Examples
+  </button></a>
+        </div>
+        <div class="css-div services-card">
+          Css <br />
+          <p>
+            After mastering the structure with HTML, I discovered the magic of
+            CSS — where everything comes to life with color, layout, and style.
+            From my first centered box to crafting responsive, pixel-perfect
+            designs, CSS gave me the power to turn plain pages into beautiful,
+            modern websites. It's where creativity meets control, and I’ve been
+            hooked ever since.
+          </p>
+        </div>
+
+        <div class="css-div services-card">
+          Bootstrap <br />
+          <p>
+            Once I felt confident with CSS, Bootstrap became my go-to toolkit
+            for building faster and more efficiently. With its powerful grid
+            system, ready-made components, and responsive design utilities, I
+            was able to create clean, mobile-friendly layouts in no time.
+            Bootstrap helped me speed up development without sacrificing quality
+            or style.
+          </p>
+        </div>
+
+        <div class="javascript-div services-card">
+          Js <br />
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa
+          suscipit eos voluptatibus. Necessitatibus repellat soluta vel! Maxime,
+          quam eius? Architecto nemo nulla dignissimos rem aspernatur dolorum
+          aperiam accusantium, quos explicabo?
+        </div>
+
+        <div class="Php-div services-card">
+          Php <br />
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iste quos,
+          velit et ad maxime, architecto doloribus qui dolor excepturi
+          consectetur nobis vitae commodi aut alias nulla suscipit culpa tempora
+          ipsa!
+        </div>
+
+        <div class="laravel-div services-card">
+          Laravel <br />
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Saepe cum
+          suscipit quas nemo cupiditate illo sequi, nesciunt unde harum.
+          Repellat qui sunt maiores consequatur optio cumque itaque sint eum
+          illo.
+        </div>
+      </div>
+    </section>
+
+    <script>
+      const aboutSection = document.querySelector(".section-about");
+
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("visible");
+              observer.unobserve(entry.target); // Only animate once
+            }
+          });
+        },
+        {
+          threshold: 0.1,
+        }
+      );
+
+      observer.observe(aboutSection);
+    </script>
+  </body>
+</html>
